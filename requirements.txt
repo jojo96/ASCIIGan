@@ -2,5 +2,5 @@ pillow
 keras
 numpy
 h5py
-tensorflow==2.4.0rc4
+tensorflow==2.2.0
 matplotlib
