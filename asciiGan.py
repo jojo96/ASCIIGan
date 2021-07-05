@@ -7,6 +7,7 @@ import numpy as np
 import os
 
 st.header("Generate ASCII images using GAN")
+st.write("Choose any image and get corresponding ASCII art:")
 
 uploaded_file = st.file_uploader("Choose an image...")
 
