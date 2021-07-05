@@ -1,7 +1,7 @@
 import streamlit as st
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow.keras.preprocessing.image import load_img
+from keras.models import load_model
+from keras.preprocessing.image import img_to_array
+from keras.preprocessing.image import load_img
 from keras.utils.data_utils import get_file
 from numpy import load
 from numpy import expand_dims
@@ -42,6 +42,6 @@ if uploaded_file is not None:
     #im = Image.fromarray((gen_image[0]* 255).astype(np.uint8))
     st.image(uploaded_file, caption='Input Image', use_column_width=True)
     st.write(os.listdir())
-    model = keras.models.load_model('../model_012000.h5')
+    model = keras.models.load_model('model_012000.h5')
     #st.image(im, caption='ASCII Art', use_column_width=True)
     
