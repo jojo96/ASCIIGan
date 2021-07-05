@@ -29,7 +29,9 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)	
 	
     #model = load_model('model_012000.h5')
-    model = tensorflow.keras.models.load_model('./model_012000.h5')
+    #model = tensorflow.keras.models.load_model('./model_012000.h5')
+    weights_path = get_file('model','https://github.com/jojo96/ASCIIGan/blob/main/model_012000.h5')
+    model = tensorflow.keras.models.load_model(weights_path)	
 	
     gen_image = model.predict(image)
     gen_image = (gen_image + 1) / 2.0
