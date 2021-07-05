@@ -24,9 +24,10 @@ def asciiart(in_f, SC, GCF,  out_f, color1='black', color2='blue', bgcolor='whit
     WCF = letter_height/letter_width
 
     #open the input file
-    #img = Image.open(in_f)
-    img = in_f
+    img = Image.open(in_f)
 
+
+    #Based on the desired output image size, calculate how many ascii letters are needed on the width and height
     widthByLetter=round(img.size[0]*SC*WCF)
     heightByLetter = round(img.size[1]*SC)
     S = (widthByLetter, heightByLetter)
@@ -34,6 +35,8 @@ def asciiart(in_f, SC, GCF,  out_f, color1='black', color2='blue', bgcolor='whit
     #Resize the image based on the symbol width and height
     img = img.resize(S)
     
+    #Get the RGB color values of each sampled pixel point and convert them to graycolor using the average method.
+    # Refer to https://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/ to know about the algorithm
     img = np.sum(np.asarray(img), axis=2)
     
     # Normalize the results, enhance and reduce the brightness contrast. 
@@ -58,9 +61,9 @@ def asciiart(in_f, SC, GCF,  out_f, color1='black', color2='blue', bgcolor='whit
     leftpadding=0
     y = 0
     lineIdx=0
-    for line in lines:###color = colorRange[lineIdx]
+    for line in lines:
         color = 'blue'
-	lineIdx +=1
+        lineIdx +=1
 
         draw.text((leftpadding, y), line, color.hex, font=font)
         y += letter_height
@@ -69,6 +72,7 @@ def asciiart(in_f, SC, GCF,  out_f, color1='black', color2='blue', bgcolor='whit
 
     #out_f = out_f.resize((1280,720))
     newImg.save(out_f)
+
 
 def load_image(filename, size=(512,512)):
 	# load image with the preferred size
