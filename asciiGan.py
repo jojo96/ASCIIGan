@@ -58,10 +58,9 @@ def asciiart(in_f, SC, GCF,  out_f, color1='black', color2='blue', bgcolor='whit
     leftpadding=0
     y = 0
     lineIdx=0
-    for line in lines:
-        #color = colorRange[lineIdx]
-	color = 'blue'
-        lineIdx +=1
+    for line in lines:###color = colorRange[lineIdx]
+        color = 'blue'
+	lineIdx +=1
 
         draw.text((leftpadding, y), line, color.hex, font=font)
         y += letter_height
