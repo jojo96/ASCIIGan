@@ -1,15 +1,9 @@
 import streamlit as st
-from keras.models import load_model
-from keras.preprocessing.image import img_to_array
-from keras.preprocessing.image import load_img
-from keras.utils.data_utils import get_file
 from numpy import load
 from numpy import expand_dims
 from matplotlib import pyplot
 from PIL import Image
 import numpy as np
-from tensorflow import keras
-import tensorflow
 import os
 
 st.write("Generate ASCII images using GAN")
