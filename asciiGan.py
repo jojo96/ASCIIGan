@@ -28,7 +28,7 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)	
 	
     #model = load_model('model_012000.h5')
-    model = tf.lite.TFLiteConverter.from_keras_model('model_012000.h5') 	
+    model = tensorflow.lite.TFLiteConverter.from_keras_model('model_012000.h5') 	
     gen_image = model.predict(image)
     gen_image = (gen_image + 1) / 2.0
 
