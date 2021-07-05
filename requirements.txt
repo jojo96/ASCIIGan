@@ -1,0 +1,4 @@
+pillow
+keras
+numpy
+matplotlib
