@@ -65,7 +65,7 @@ def asciiart(in_f, SC, GCF,  out_f, color1='black', color2='blue', bgcolor='whit
         color = 'blue'
         lineIdx +=1
 
-        draw.text((leftpadding, y), line, color.hex, font=font)
+        draw.text((leftpadding, y), line, '#0000FF', font=font)
         y += letter_height
 
     # Save the image file
