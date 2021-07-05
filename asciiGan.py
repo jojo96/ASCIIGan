@@ -46,7 +46,7 @@ def asciiart(in_f, SC, GCF,  out_f, color1='black', color2='blue', bgcolor='whit
 
     # Create gradient color bins
     nbins = len(lines)
-    colorRange =list(Color(color1).range_to(Color(color2), nbins))
+    #colorRange =list(Color(color1).range_to(Color(color2), nbins))
 
     #Create an image object, set its width and height
     newImg_width= letter_width *widthByLetter
@@ -59,7 +59,8 @@ def asciiart(in_f, SC, GCF,  out_f, color1='black', color2='blue', bgcolor='whit
     y = 0
     lineIdx=0
     for line in lines:
-        color = colorRange[lineIdx]
+        #color = colorRange[lineIdx]
+	color = 'blue'
         lineIdx +=1
 
         draw.text((leftpadding, y), line, color.hex, font=font)
