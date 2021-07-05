@@ -2,3 +2,4 @@ pillow
 keras
 numpy
 matplotlib
+tensorflow-estimator==2.1.*
