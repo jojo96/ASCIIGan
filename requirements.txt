@@ -1,5 +1,6 @@
 pillow
 keras
 numpy
+h5py
 tensorflow==2.4.0rc4
 matplotlib
