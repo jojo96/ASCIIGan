@@ -108,6 +108,6 @@ if uploaded_file is not None:
 	
     st.image(uploaded_file, caption='Input Image', use_column_width=True)
     #st.write(os.listdir())
-    im = imgGen2(image)	
+    im = imgGen2(uploaded_file)	
     
 
