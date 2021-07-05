@@ -7,6 +7,7 @@ from numpy import expand_dims
 from matplotlib import pyplot
 from PIL import Image
 import numpy as np
+import tensorflow
 
 st.write("Generate ASCII images using GAN")
 
