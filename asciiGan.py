@@ -9,6 +9,7 @@ from matplotlib import pyplot
 from PIL import Image
 import numpy as np
 import tensorflow
+import os
 
 st.write("Generate ASCII images using GAN")
 
@@ -31,14 +32,14 @@ if uploaded_file is not None:
 	
     #model = load_model('model_012000.h5')
     #model = tensorflow.keras.models.load_model('./model_012000.h5')
-    weights_path = get_file('model','https://github.com/jojo96/ASCIIGan/blob/main/model_012000.h5')
-    model = tensorflow.keras.models.load_model(weights_path)	
+    #weights_path = get_file('model','https://github.com/jojo96/ASCIIGan/blob/main/model_012000.h5')
+    #model = tensorflow.keras.models.load_model(weights_path)	
 	
     gen_image = model.predict(image)
     gen_image = (gen_image + 1) / 2.0
 
     im = Image.fromarray((gen_image[0]* 255).astype(np.uint8))
-    st.image(uploaded_file, caption='ASCII Art', use_column_width=True)
-    
-    st.image(im, caption='ASCII Art', use_column_width=True)
+    st.image(uploaded_file, caption='Input Image', use_column_width=True)
+    st.write(os.listdir())
+    #st.image(im, caption='ASCII Art', use_column_width=True)
     
