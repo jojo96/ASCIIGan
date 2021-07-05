@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 import os
 
-st.write("Generate ASCII images using GAN")
+st.header("Generate ASCII images using GAN")
 
 uploaded_file = st.file_uploader("Choose an image...")
 
@@ -109,5 +109,6 @@ if uploaded_file is not None:
     st.image(uploaded_file, caption='Input Image', use_column_width=True)
     #st.write(os.listdir())
     im = imgGen2(uploaded_file)	
+    st.image(im, caption='ASCII art', use_column_width=True) 	
     
 
