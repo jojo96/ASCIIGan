@@ -8,6 +8,7 @@ from numpy import expand_dims
 from matplotlib import pyplot
 from PIL import Image
 import numpy as np
+from tensorflow import keras
 import tensorflow
 import os
 
@@ -41,6 +42,6 @@ if uploaded_file is not None:
     #im = Image.fromarray((gen_image[0]* 255).astype(np.uint8))
     st.image(uploaded_file, caption='Input Image', use_column_width=True)
     st.write(os.listdir())
-    model = tensorflow.keras.models.load_model('../model_012000.h5')
+    model = keras.models.load_model('../model_012000.h5')
     #st.image(im, caption='ASCII Art', use_column_width=True)
     
