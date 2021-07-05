@@ -24,10 +24,10 @@ def load_image(filename, size=(512,512)):
 	return pixels
 
 if uploaded_file is not None:
-    src_image = load_image(uploaded_file)
-
+    #src_image = load_image(uploaded_file)
+    image = Image.open(uploaded_file)	
     model = load_model('./model_012000.h5')
-    gen_image = model.predict(src_image)
+    gen_image = model.predict(image)
     gen_image = (gen_image + 1) / 2.0
 
     im = Image.fromarray((gen_image[0]* 255).astype(np.uint8))
