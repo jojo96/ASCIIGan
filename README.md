@@ -15,7 +15,7 @@ The whole project has been carried out on Google Colab.
 The dataset can be found in this folder and is also available on [Kaggle](https://www.kaggle.com/jojo096/imagetoasciiart)
 
 ## Models
-A pretrained model is provided can be downloaded from https://github.com/jojo96/ASCIIGan/blob/main/model_012000.h5
+A pretrained model is provided can be downloaded from https://drive.google.com/file/d/1Z3xFnExTV-Jv3-KY1VU3wQCNm_0zLjq-/view?usp=sharing
 
 ## Setup Training and Test data
 ### Generating Pairs
