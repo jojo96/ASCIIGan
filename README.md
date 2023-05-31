@@ -16,6 +16,7 @@ The dataset can be found in this folder and is also available on [Kaggle](https:
 
 ## Models
 A pretrained model is provided can be downloaded from https://drive.google.com/file/d/1Z3xFnExTV-Jv3-KY1VU3wQCNm_0zLjq-/view?usp=sharing
+In case, I am late in sharing the model, feel free to mail here: ujjayanta.bhaumik.18@ucl.ac.uk
 
 ## Setup Training and Test data
 ### Generating Pairs
